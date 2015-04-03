@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # DccCharacterBuilderVer2
 DCC RPG Character Builder built on NGBP Framework in AngularJS
 =======
@@ -382,4 +381,3 @@ of you!
 Make sure to check out the [Contributing Guide](./CONTRIBUTING.md).
 
 So join the team! We're good people.
->>>>>>> initial_commit
