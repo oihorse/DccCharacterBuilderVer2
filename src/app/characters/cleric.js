@@ -26,7 +26,7 @@ Cleric.generateCritTable = function () {
 
 Cleric.getClericTitle = function (alignment, level) {
     var title = "";
-    level = parseInt(level);
+    level = parseInt(level, 10);
 
 
     if (alignment.indexOf('Lawful') != -1) {
@@ -116,8 +116,8 @@ Cleric.getClericTitle = function (alignment, level) {
 
 Cleric.getSpellCheck = function (charLevel, personalityModifier) {
     var sc = "";
-    charLevel = parseInt(charLevel);
-    personalityModifier = parseInt(personalityModifier);
+    charLevel = parseInt(charLevel, 10);
+    personalityModifier = parseInt(personalityModifier, 10);
 
     var scModifier = charLevel + personalityModifier;
 
@@ -135,7 +135,7 @@ Cleric.getSpellCheck = function (charLevel, personalityModifier) {
 
 Cleric.getMaximumSpellCastingLevel = function (personality) {
     var spellText = "";
-    personality = parseInt(personality);
+    personality = parseInt(personality, 10);
 
     var mscl = Cleric.maxSpellCastingLevel[personality - 3];
 

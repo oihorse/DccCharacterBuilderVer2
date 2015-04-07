@@ -56,7 +56,7 @@ Thief = {
 
 Thief.getThiefTitle = function (alignment, level) {
     var title = "";
-    level = parseInt(level);
+    level = parseInt(level, 10);
 
     if (alignment.indexOf('Lawful') != -1) {
         switch (level) {
@@ -151,10 +151,10 @@ Thief.generateCritTable = function () {
 
 Thief.generateThiefSkills = function (alignment, level, agilityModifier, intelligenceModifier, personalityModifier) {
     alignment = alignment;
-    level = parseInt(level);
-    agilityModifier = parseInt(agilityModifier);
-    intelligenceModifier = parseInt(intelligenceModifier);
-    personalityModifier = parseInt(personalityModifier);
+    level = parseInt(level, 10);
+    agilityModifier = parseInt(agilityModifier, 10);
+    intelligenceModifier = parseInt(intelligenceModifier, 10);
+    personalityModifier = parseInt(personalityModifier, 10);
 
     if (alignment.indexOf('Lawful') != -1) {
         switch (level) {

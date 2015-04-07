@@ -44,7 +44,7 @@ Warrior = {
 
 Warrior.getWarriorTitle = function (alignment, level) {
     var title = "";
-    level = parseInt(level);
+    level = parseInt(level, 10);
 
     if (alignment.indexOf('Lawful') != -1) {
 
@@ -134,7 +134,7 @@ Warrior.getWarriorTitle = function (alignment, level) {
 
 Warrior.generateCritTable = function (level) {
     var crit = "";
-    level = parseInt(level);
+    level = parseInt(level, 10);
 
     if (level < 3) {
         crit = "III";
