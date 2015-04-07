@@ -1,16 +1,16 @@
 {
-  "author": "Josh David Miller",
-  "name": "ngbp",
-  "version": "0.3.2",
-  "homepage": "https://github.com/ngbp/ngbp",
+  "author": "Chris Gohlinghorst",
+  "name": "DCC Character Creator",
+  "version": "0.0.1",
+  "homepage": "https://github.com/oihorse/DccCharacterBuilderVer2/issues",
   "licenses": {
     "type": "MIT",
-    "url": "https://raw.github.com/ngbp/ngbp/master/LICENSE"
+    "url": "https://raw.github.com/oihorse/DccCharacterBuilderVer2/master/LICENSE"
   },
-  "bugs": "https://github.com/ngbp/ngbp/issues",
+  "bugs": "https://github.com/oihorse/DccCharacterBuilderVer2/issues",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ngbp/ngbp.git"
+    "url": "git@github.com:oihorse/DccCharacterBuilderVer2.git"
   },
   "dependencies": {},
   "devDependencies": {

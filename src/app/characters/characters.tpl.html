@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html ng-app="characterCreator" >
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>DCC Character Generator</title>
-    <link rel="styleSheet" href="css/main.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.js"></script>
-    <!--<script src="/release/ui-grid.js"></script>-->
-
-</head>
-<body ng-controller="CharacterController">
 <h1>DCC Character Creator</h1>
 
 <div>
@@ -96,43 +85,30 @@
     <p>Starting Equipment: {{ charOccupation.equipment }}</p>
 
 
-    <!-- <script type="text/javascript" src="scripts/controllers/characterController.js"></script>->
-     <!--<script type="text/javascript" src="scripts/controllers/charClassController.js"></script>-->
-</div>
-
 <div ng-switch on="charClass.name">
     <div ng-switch-when="Warrior">
-        <div ng-include src=" 'app/classViews/warriorview.html' "></div>
+        <div ng-include src=" 'characters/warriorview.tpl.html' "></div>
     </div>
     <div ng-switch-when="Wizard">
-        <div ng-include src=" 'app/classViews/wizardview.html' "></div>
+        <div ng-include src=" 'characters/wizardview.tpl.html' "></div>
     </div>
     <div ng-switch-when="Cleric">
-        <div ng-include src=" 'app/classViews/clericview.html' "></div>
+        <div ng-include src=" 'characters/clericview.tpl.html' "></div>
     </div>
     <div ng-switch-when="Thief">
-        <div ng-include src=" 'app/classViews/thiefview.html' "></div>
+        <div ng-include src=" 'characters/thiefview.tpl.html' "></div>
     </div>
     <div ng-switch-when="Elven">
-        <div ng-include src=" 'app/classViews/elfview.html' "></div>
+        <div ng-include src=" 'characters/elfview.tpl.html' "></div>
     </div>
     <div ng-switch-when="Dwarven">
-        <div ng-include src=" 'app/classViews/dwarfview.html' "></div>
+        <div ng-include src=" 'characters/dwarfview.tpl.html' "></div>
     </div>
     <div ng-switch-when="Halfling">
-        <div ng-include src=" 'app/classViews/halflingview.html' "></div>
+        <div ng-include src=" 'characters/halflingview.tpl.html' "></div>
     </div>
 </div>
 
-<!--<div>-->
-<!--<div ui-grid="{ data: myData }" class="myGrid"></div>-->
-<!--</div>-->
-
-
-<script type="text/javascript" src="scripts/app.js"></script>
-<script type="text/javascript" src="scripts/characterClasses/warrior.js"></script>
-<script type="text/javascript" src="scripts/characterClasses/thief.js"></script>
-<script type="text/javascript" src="scripts/characterClasses/cleric.js"></script>
-
-</body>
-</html>
+<!--<script type="text/javascript" src="characterClasses/warrior.js"></script>-->
+<!--<script type="text/javascript" src="characterClasses/thief.js"></script>-->
+<!--<script type="text/javascript" src="characterClasses/cleric.js"></script>-->

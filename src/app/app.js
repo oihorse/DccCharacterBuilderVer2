@@ -1,8 +1,9 @@
-angular.module( 'ngBoilerplate', [
+var ngBoilerplate = angular.module( 'ngBoilerplate', [
   'templates-app',
   'templates-common',
   'ngBoilerplate.home',
   'ngBoilerplate.about',
+  'ngBoilerplate.characters',
   'ui.router'
 ])
 
@@ -19,7 +20,8 @@ angular.module( 'ngBoilerplate', [
       $scope.pageTitle = toState.data.pageTitle + ' | ngBoilerplate' ;
     }
   });
-})
 
-;
+      ngBoilerplate.run(function($state){});
+
+});
 
