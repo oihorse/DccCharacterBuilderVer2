@@ -372,16 +372,16 @@ angular.module('ngBoilerplate.characters', [
                 }
                 if ($scope.charClass.name.indexOf('Elven') != -1) {
 
-                    if ($scope.charLevel && $scope.alignment) {
+                    if ($scope.charLevel) {
 
-                        $scope.charTitle = Elf.getElfTitle($scope.alignment.name, $scope.charLevel);
+                        $scope.charTitle = Elf.getElfTitle($scope.charLevel);
                     }
                 }
                 if ($scope.charClass.name.indexOf('Halfling') != -1) {
 
-                    if ($scope.charLevel && $scope.alignment) {
+                    if ($scope.charLevel) {
 
-                        $scope.charTitle = Halfling.getHalflingTitle($scope.alignment.name, $scope.charLevel);
+                        $scope.charTitle = Halfling.getHalflingTitle($scope.charLevel);
                     }
                 }
             }
@@ -814,7 +814,7 @@ angular.module('ngBoilerplate.characters', [
                         if ($scope.charIntelligence) {
                             $scope.spellCheck = Elf.getSpellCheck($scope.charLevel, $scope.charIntelligence.modifier);
                             $scope.maximumSpellCastingLevel = Elf.getMaximumSpellCastingLevel($scope.charIntelligence.score);
-                            $scope.spellsKnown = Elf.getNumberOfSpellsKnown($scope.charLevel, $scope.charIntelligence.score);
+                            $scope.spellsKnown = Elf.getNumberOfSpellsKnown($scope.charLevel);
                             $scope.currentSpellCastingLevel = Elf.getCurrentCastingLevel($scope.charLevel);
 
                             if ($scope.maximumSpellCastingLevel < $scope.currentSpellCastingLevel)

@@ -17,8 +17,7 @@ Elf = {
     reflexBonus: [1, 1, 1, 2, 2, 2, 3, 3, 3, 4],
     spellsKnown: [3,4,5,6,7,8,9,10,12,14],
     maxLevel: [1,1,2,2,3,3,4,4,5,5],
-    maxSpellCastingLevel: [1, 1, 1, 1, 2, 2, 3, 3, 4, 4, 4, 5, 5, 5, 6],
-    bonusSpellsKnown: [-16, -2, -2, -1, -1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 2, 2]
+    maxSpellCastingLevel: [1, 1, 1, 1, 2, 2, 3, 3, 4, 4, 4, 5, 5, 5, 5]
 };
 
 Elf.generateCritTable = function () {
@@ -85,13 +84,12 @@ Elf.getMaximumSpellCastingLevel = function (intelligence) {
     return mscl;
 };
 
-Elf.getNumberOfSpellsKnown = function(charLevel, intelligenceModifier) {
+Elf.getNumberOfSpellsKnown = function(charLevel) {
     var sk = 0;
 
     charLevel = parseInt(charLevel, 10);
-    intelligenceModifier = parseInt(intelligenceModifier, 10);
 
-    sk = (Elf.spellsKnown[charLevel -1]) + (Elf.bonusSpellsKnown[intelligenceModifier-3]);
+    sk = (Elf.spellsKnown[charLevel -1]);
 
     if (sk <= 0) {
         return 0;

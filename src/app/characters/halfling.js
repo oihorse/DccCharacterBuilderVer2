@@ -26,7 +26,7 @@ Halfling = {
 
 };
 
-Halfling.getHalflingTitle = function (alignment, level) {
+Halfling.getHalflingTitle = function (level) {
     var title = "";
     level = parseInt(level, 10);
 
