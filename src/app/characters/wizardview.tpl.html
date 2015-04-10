@@ -1,7 +1,7 @@
-<p>Paton(s): <input ng-model="patron" type="text" placeholder="patron(s)"></p>
-<p>Familiar:  <input ng-model="familiar" type="text" placeholder="familiar"> </p>
-<p>Corruption:  <input ng-model="corruption" type="text" placeholder="corruption"> </p>
-<p>Spell Check: {{ spellCheck }}</p>
-<p>Can cast up to spell level: {{ currentSpellCastingLevel }}</p>
-<p>Number of Spells Known: {{ spellsKnown }}</p>
-<p>Maximum Spell Casting Level: {{ maximumSpellCastingLevel }}</p>
+<label for="patrons">Paton(s):</label> <input id="patrons" ng-model="patron" type="text" placeholder="patron(s)"><br>
+<label for="familiar">Familiar:</label>  <input id="familiar" ng-model="familiar" type="text" placeholder="familiar"> <br>
+<label for="corruption">Corruption:</label>  <input id="corruption" ng-model="corruption" type="text" placeholder="corruption"> <br>
+<label>Spell Check:</label> {{ spellCheck }}<br>
+<label>Can cast up to spell level:</label> {{ currentSpellCastingLevel }}<br>
+<label>Number of Spells Known:</label> {{ spellsKnown }}<br>
+<label>Maximum Spell Casting Level:</label> {{ maximumSpellCastingLevel }}

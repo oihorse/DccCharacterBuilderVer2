@@ -154,7 +154,7 @@ Cleric.getSpellsKnown = function (charLevel) {
             break;
         case 2:
             spellText = "1st level - " + sk[0] + "\n" +
-            "\n 2nd level - " + sk[1];
+            "2nd level - " + sk[1];
             break;
         case 3:
             spellText = "1st level - " + sk[0] + "\n" +
