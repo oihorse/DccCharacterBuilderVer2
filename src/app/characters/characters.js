@@ -1005,5 +1005,6 @@ angular.module('ngBoilerplate.characters', [
 
             }
         };
+
     });
 
