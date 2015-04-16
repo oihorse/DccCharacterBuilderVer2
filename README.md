@@ -22,7 +22,7 @@ $ grunt watch
 
 Finally, open `file:///path/to/ng-boilerplate/build/index.html` in your browser.
 
-Happy hacking!
+Happy hacking!bo
 
 ## Purpose
 

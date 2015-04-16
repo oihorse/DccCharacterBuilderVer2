@@ -3,7 +3,7 @@
 <div class="charDiv">
     <div>
         <label for="occupation">Occupation:</label>
-        <select id="occupation" ng-model="charOccupation"
+        <select id="occupation" ng-model="character.occupation"
                 ng-options="occupation as occupation.occupation for occupation in charSelection"
                 ng-change="updateClass()">
             <option value="">Select Occupation</option>
@@ -14,21 +14,21 @@
         <ul>
             <li>
             <label for="alignment">Alignment:</label>
-            <select id="alignment" ng-model="alignment" ng-options="alignment as alignment.name for alignment in alignmentSelection"
+            <select id="alignment" ng-model="character.alignment" ng-options="alignment as alignment.name for alignment in alignmentSelection"
                     ng-change="generateCharTitle()">
                 <option value="">Select Alignment</option>
             </select>
             </li>
             <li>
             <label for="class">Class:</label>
-            <select id="class" ng-model="charClass" ng-options="charClass as charClass.name for charClass in classSelection"
+            <select id="class" ng-model="character.class" ng-options="class as class.name for class in classSelection"
                     ng-disabled="occupationCheck" ng-change="classChosen()">
                 <option value="">Select Class</option>
             </select>
             </li>
         <li>
         <label for="level">Level:</label>
-            <select id="level" ng-model="charLevel" ng-change="generateLevelChanges()">
+            <select id="level" ng-model="character.level" ng-change="generateLevelChanges()">
                 <option value="">Select Level</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -47,64 +47,64 @@
     <div>
          <ul>
              <li>
-                 <label for="name">Name:</label> <input id="name" ng-model="charName" type="text" placeholder="Character Name">
+                 <label for="name">Name:</label> <input id="name" ng-model="character.name" type="text" placeholder="Character Name">
              </li>
              <li>
-                 <label for="title">Title:</label> <input id="title" ng-model="charTitle" type="text" placeholder="Title" ng-readonly=true>
+                 <label for="title">Title:</label> <input id="title" ng-model="character.title" type="text" placeholder="Title" ng-readonly=true>
              </li>
          </ul>
     </div>
     <div>
         <ul>
-            <li> <label>Hit Points:</label> {{ hitPoints }}</li>
-            <li> <label>Speed:</label> {{ charClass.speed }}</li>
-            <li> <label>Initiative:</label>{{ charInitiative }}</li>
+            <li> <label>Hit Points:</label> {{ character.hitPoints }}</li>
+            <li> <label>Speed:</label> {{ character.class.speed }}</li>
+            <li> <label>Initiative:</label>{{ character.initiative }}</li>
         </ul>
     </div>
 
     <div>
-        <label>Crit Table:</label> {{ critTable }} <br>
-        <label>Crit Die:</label> {{ critDie }} <br>
-        <label>Attack Bonus:</label> {{ attackBonus }} <br>
-        <label>Action Die:</label> {{ actionDie }} <br>
-        <label>Melee Attack Bonus:</label> {{ meleeAttackBonus }}<br>
-        <label>Missile Attack Bonus:</label> {{ missileAttackBonus }}
+        <label>Crit Table:</label> {{ character.critTable }} <br>
+        <label>Crit Die:</label> {{ character.critDie }} <br>
+        <label>Attack Bonus:</label> {{ character.attackBonus }} <br>
+        <label>Action Die:</label> {{ character.actionDie }} <br>
+        <label>Melee Attack Bonus:</label> {{ character.meleeAttackBonus }}<br>
+        <label>Missile Attack Bonus:</label> {{ character.missileAttackBonus }}
     </div>
 
 
     <div class="stats">
         <button ng-click="randomStats()" class="button">Generate stats</button>
         <br>
-        <label for="strenghtScore">Strength:</label> <input id="strenghtScore" ng-Model="charStrength.score" type="text" ng-disabled=true >
-        <label for="strengthModifier" class="modifierLabel">Modifier:</label> <input id="strengthModifier" ng-model="charStrength.modifier" type="text" ng-disabled=true><br>
+        <label for="strenghtScore">Strength:</label> <input id="strenghtScore" ng-Model="character.strength.score" type="text" ng-disabled=true >
+        <label for="strengthModifier" class="modifierLabel">Modifier:</label> <input id="strengthModifier" ng-model="character.strength.modifier" type="text" ng-disabled=true><br>
 
-        <label for="agilityScore">Agility:</label> <input id="agilityScore" ng-Model="charAgility.score" type="text" ng-disabled=true>
-        <label for="agilityModifier"  class="modifierLabel">Modifier:</label> <input id="agilityModifier" ng-model="charAgility.modifier" type="text" ng-disabled=true>
-        <label for="reflexSave" class="saveLabel">Reflex Save:</label> <input id="reflexSave" ng-model="reflexSave" type="text" ng-disabled=true><br>
+        <label for="agilityScore">Agility:</label> <input id="agilityScore" ng-Model="character.agility.score" type="text" ng-disabled=true>
+        <label for="agilityModifier"  class="modifierLabel">Modifier:</label> <input id="agilityModifier" ng-model="character.agility.modifier" type="text" ng-disabled=true>
+        <label for="reflexSave" class="saveLabel">Reflex Save:</label> <input id="reflexSave" ng-model="character.reflexSave" type="text" ng-disabled=true><br>
 
-        <label for="staminaScore">Stamina:</label> <input id="staminaScore" ng-Model="charStamina.score" type="text" ng-disabled=true>
-        <label for="staminaModifier" class="modifierLabel">Modifier:</label> <input id="staminaModifier" ng-model="charStamina.modifier" type="text" ng-disabled=true>
-        <label for="fortitudeSave" class="saveLabel">Fortitude Save:</label> <input id="fortitudeSave" ng-model="fortitudeSave" type="text" ng-disabled=true><br>
+        <label for="staminaScore">Stamina:</label> <input id="staminaScore" ng-Model="character.stamina.score" type="text" ng-disabled=true>
+        <label for="staminaModifier" class="modifierLabel">Modifier:</label> <input id="staminaModifier" ng-model="character.stamina.modifier" type="text" ng-disabled=true>
+        <label for="fortitudeSave" class="saveLabel">Fortitude Save:</label> <input id="fortitudeSave" ng-model="character.fortitudeSave" type="text" ng-disabled=true><br>
 
-        <label for="personalityScore">Personality:</label> <input id="personalityScore" ng-Model="charPersonality.score" type="text" ng-disabled=true>
-        <label for="personalityModifier" class="modifierLabel">Modifier:</label> <input id="personalityModifier" ng-model="charPersonality.modifier" type="text" ng-disabled=true>
-        <label for="willpowerSave" class="saveLabel">Willpower Save:</label> <input id="willpowerSave" ng-model="willPowerSave" type="text" ng-disabled=true><br>
+        <label for="personalityScore">Personality:</label> <input id="personalityScore" ng-Model="character.personality.score" type="text" ng-disabled=true>
+        <label for="personalityModifier" class="modifierLabel">Modifier:</label> <input id="personalityModifier" ng-model="character.personality.modifier" type="text" ng-disabled=true>
+        <label for="willpowerSave" class="saveLabel">Willpower Save:</label> <input id="willpowerSave" ng-model="character.willPowerSave" type="text" ng-disabled=true><br>
 
-        <label for="luckScore">Luck:</label> <input id="luckScore" ng-Model="charLuck.score" type="text" ng-disabled=true>
-        <label for="luckModifier" class="modifierLabel">Modifier:</label> <input id="luckModifier" ng-model="charLuck.modifier" type="text" ng-disabled=true><br>
+        <label for="luckScore">Luck:</label> <input id="luckScore" ng-Model="character.luck.score" type="text" ng-disabled=true>
+        <label for="luckModifier" class="modifierLabel">Modifier:</label> <input id="luckModifier" ng-model="character.luck.modifier" type="text" ng-disabled=true><br>
 
-        <label for="intelligenceScore">Intelligence:</label> <input id="intelligenceScore" ng-Model="charIntelligence.score" type="text" ng-disabled=true>
-        <label for="intelligenceModifier" class="modifierLabel">Modifier:</label> <input id="intelligenceModifier" ng-model="charIntelligence.modifier" type="text" ng-disabled=true> <br>
-        <label>Lucky Roll:</label> {{ luckyRollResult.name }}
+        <label for="intelligenceScore">Intelligence:</label> <input id="intelligenceScore" ng-Model="character.intelligence.score" type="text" ng-disabled=true>
+        <label for="intelligenceModifier" class="modifierLabel">Modifier:</label> <input id="intelligenceModifier" ng-model="character.intelligence.modifier" type="text" ng-disabled=true> <br>
+        <label>Lucky Roll:</label> {{ character.luckyRoll.name }}
     </div>
 
     <div>
-        <label>Starting Weapon:</label> {{ charOccupation.startingWeapon }}<br>
+        <label>Starting Weapon:</label> {{ character.occupation.startingWeapon }}<br>
 
-        <label>Starting Equipment:</label> {{ charOccupation.equipment }}
+        <label>Starting Equipment:</label> {{ character.occupation.equipment }}
     </div>
 
-    <div ng-switch on="charClass.name">
+    <div ng-switch on="character.class.name">
         <div ng-switch-when="Warrior">
             <div ng-include src=" 'characters/warriorview.tpl.html' "></div>
         </div>
@@ -128,4 +128,17 @@
         </div>
     </div>
 
+
+    <form name="testPHP_form"  ng-submit="signupForm()">
+        <fieldset>
+            <legend>Signup</legend>
+
+            <label for="testName">Name:</label> <input id="testName" ng-model="characterTest.name" type="text" placeholder="Character Name"><br>
+            <label for="testTitle">Title:</label> <input id="testTitle" ng-model="characterTest.title" type="text" placeholder="Title"><br>
+            <label for="testClass">Class:</label> <input id="testClass" ng-model="characterTest.class" type="text" placeholder="Class">
+
+
+            <button type="submit" class="button radius">Submit</button>
+        </fieldset>
+    </form>
 </div>
